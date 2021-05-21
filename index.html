@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hw7</title>
+  </head>
+  <body>
+    <script>
+      //       1.  reverseString(string)
+      // Принимает строку и возвращает новую строку, но перевернутую в обратном порядке
+      // Например: reverseString('hello') -> olleh
+
+      function reverseString(string) {
+        var newString = "";
+        for (var i = string.length - 1; i >= 0; i--) {
+          newString += string[i];
+        }
+        return newString;
+      }
+
+      console.log(reverseString("This string will be reversed"));
+
+      //        2.  isCharPresent(string, char)
+      // Она принимает 2 аргумента - строку и символ и узнает содержится ли символ в строке, возвращает true / false
+
+      function isCharPresent(string, char) {
+        for (var i = 0; i < string.length; i++) {
+          if (string[i] === char) {
+            var bool = true;
+            break;
+          } else {
+            bool = false;
+          }
+        }
+        return bool;
+      }
+
+      console.log(isCharPresent("This is string", "z"));
+      console.log(isCharPresent("This is string", "g"));
+
+      //          3.   charIndexOf(string, char)
+      // Принимает такие же аргументы, но возвращает индекс или -1, если символа нет.
+
+      function charIndexOf(string, char) {
+        var result = 0;
+        for (var i = 0; i < string.length; i++) {
+          if (string[i] === char) {
+            result = i;
+            break;
+          } else {
+            result = -1;
+          }
+        }
+        return result;
+      }
+
+      console.log(charIndexOf("Whatever", "r"));
+      console.log(charIndexOf("Whatever", "z"));
+    </script>
+  </body>
+</html>
